@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logging interpretation</title>
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <script type="text/javascript" src="OpenLayers/openlayers.js"></script>
+    <script type="text/javascript">
+        function init() {
+// 使用指定的文档元素创建地图
+            var map = new OpenLayers.Map("gis");
+// 创建一个 OpenStreeMap raster layer
+// 把这个图层添加到map中
+            var osm = new OpenLayers.Layer.OSM();
+            map.addLayer(osm);
+// 设定视图缩放地图程度为最大
+            map.zoomToMaxExtent();
+        }
+    </script>
+</head>
+<body onload="init()">
+<header>
+    <section class="menu">
+        <ul>
+            <li><a href="#">Project</a></li>
+            <li><a href="#">Edit</a></li>
+            <li><a href="#">View</a></li>
+            <li><a href="#">Windows</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Help</a></li>
+        </ul>
+        <div class="nav_panels">
+            <section class="project_panels">
+                <ul>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Open</a></li>
+                <li><a href="#">Save</a></li>
+                <li><a href="#">Download</a></li>
+                <li><a href="#">Output</a></li>
+                </ul>
+            </section>
+        </div>
+    </section>
+</header>
+<div id="main">
+    <article id="gis"><div class="coordinate">Info</div></article>
+    <nav>
+        <section class="nav">
+            <ul>
+                <li><a href="#" class="active">Navigtion</a></li>
+                <li><a href="#">Date</a></li>
+                <li><a href="#">Cross</a></li>
+            </ul>
+        </section>
+    </nav>
+    <aside>Properties Pane</aside>
+</div>
+<footer>footer</footer>
+</body>
+</html>
